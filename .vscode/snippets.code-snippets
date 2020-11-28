@@ -7,6 +7,6 @@
   "PHP Tag with Class": {
     "scope": "html",
     "prefix": "phpclass",
-    "body": "<?php\n/**\n * Class $TM_FILENAME_BASE \n *\n * @author Hachidaime\n */\n\nclass $TM_FILENAME_BASE {\n$1\n}\n?>"
+    "body": "<?php\n/**\n * Class $TM_FILENAME_BASE \n *\n * @author Hachidaime\n */\nclass $TM_FILENAME_BASE {\n$1\n}\n?>"
   }
 }

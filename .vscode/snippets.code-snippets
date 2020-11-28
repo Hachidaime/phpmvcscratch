@@ -2,6 +2,11 @@
   "PHP Tag": {
     "scope": "html",
     "prefix": "php",
-    "body": "<?php\n/**\n* @author Hachidaime\n*/\n$1\n?>"
+    "body": "<?php\n/**\n * @author Hachidaime\n */\n$1\n?>"
+  },
+  "PHP Tag with Class": {
+    "scope": "html",
+    "prefix": "phpclass",
+    "body": "<?php\n/**\n * Class $TM_FILENAME_BASE \n *\n * @author Hachidaime\n */\n\nclass $TM_FILENAME_BASE {\n$1\n}\n?>"
   }
 }

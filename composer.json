@@ -1,0 +1,15 @@
+{
+    "name": "cold/phpmvcscratch",
+    "authors": [
+        {
+            "name": "Hachidaime",
+            "email": "cold.kid40@gmail.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "app\\": "./"
+      }
+    },
+    "require": {}
+}

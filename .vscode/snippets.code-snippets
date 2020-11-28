@@ -1,0 +1,7 @@
+{
+  "PHP Tag": {
+    "scope": "html",
+    "prefix": "php",
+    "body": "<?php\n/**\n* @author Hachidaime\n*/\n$1\n?>"
+  }
+}

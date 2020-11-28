@@ -1,0 +1,37 @@
+{
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": { "parser": "json" }
+    },
+    {
+      "files": "*.php",
+      "options": {
+        "semi": true,
+        "printWidth": 80,
+        "tabWidth": 4,
+        "useTabs": false,
+        "singleQuote": true,
+        "phpVersion": "7.0",
+        "trailingCommaPHP": false,
+        "braceStyle": "psr-2",
+        "requirePragma": false,
+        "insertPragma": false
+      }
+    },
+    {
+      "files": ["*.js", "*.tpl", "*.html"],
+      "options": {
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": ["*.json"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}

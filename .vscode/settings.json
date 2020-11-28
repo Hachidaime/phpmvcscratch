@@ -36,5 +36,6 @@
   "emmet.includeLanguages": {
     "smarty": "html"
   },
-  "html.format.wrapLineLength": 80
+  "html.format.wrapLineLength": 80,
+  "editor.quickSuggestions": { "comments": true }
 }

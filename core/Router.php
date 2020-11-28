@@ -1,4 +1,5 @@
 <?php
+
 namespace app\core;
 
 /**
@@ -23,11 +24,23 @@ class Router
         $this->request = $request;
     }
 
+    /**
+     * get
+     *
+     * @param  mixed $path
+     * @param  mixed $collback
+     * @return void
+     */
     public function get($path, $collback)
     {
         $this->routes['get'][$path] = $collback;
     }
 
+    /**
+     * resolve
+     *
+     * @return void
+     */
     public function resolve()
     {
         $path = $this->request->getPath();

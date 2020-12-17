@@ -5,19 +5,19 @@
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+error_reporting(E_ALL ^ E_DEPRECATED);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use app\core\Application;
+use app\controllers\SiteController;
 
 $app = new Application(dirname(__DIR__));
 
-$app->router->get('/', 'home');
-$app->router->get('/contact', 'contact');
-$app->router->post('/contact', function () {
-    return 'handling submited data';
-});
+$app->router->get('/', [SiteController::class, 'home']);
+
+$app->router->get('/contact', [SiteController::class, 'contact']);
+$app->router->post('/contact', [SiteController::class, 'handleContact']);
 
 $app->run();
 

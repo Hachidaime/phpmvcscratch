@@ -72,6 +72,10 @@ class Router
             return $this->renderView($callback);
         }
 
+        if (is_array($callback)) {
+            $callback[0] = new $callback[0]();
+        }
+
         return call_user_func($callback);
     }
 
@@ -81,13 +85,19 @@ class Router
      * @param  mixed $view
      * @return void
      */
-    public function renderView($view)
+    public function renderView($view, $params = [])
     {
         $layoutContent = $this->layoutContent();
-        $viewContent = $this->renderOnlyView($view);
+        $viewContent = $this->renderOnlyView($view, $params);
         return str_replace('{{ content }}', $viewContent, $layoutContent);
     }
 
+    /**
+     * renderContent
+     *
+     * @param  mixed $viewContent
+     * @return void
+     */
     public function renderContent($viewContent)
     {
         $layoutContent = $this->layoutContent();
@@ -112,11 +122,14 @@ class Router
      * @param  mixed $view
      * @return void
      */
-    protected function renderOnlyView($view)
+    protected function renderOnlyView($view, $params)
     {
+        foreach ($params as $key => $value) {
+            $$key = $value;
+        }
+
         ob_start();
         include_once Application::$ROOT_DIR . "/views/{$view}.tpl";
         return ob_get_clean();
     }
 }
-?>

@@ -21,8 +21,8 @@
   "editor.fontSize": 11,
   "editor.lineHeight": 22,
   "editor.rulers": [80, 120],
-  "workbench.colorTheme": "Solarized Light",
-  "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "workbench.colorTheme": "New England",
+  "editor.fontFamily": "'Cartograph CF','JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "workbench.iconTheme": "vscode-icons",
   "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
@@ -37,5 +37,11 @@
     "smarty": "html"
   },
   "html.format.wrapLineLength": 80,
-  "editor.quickSuggestions": { "comments": true }
+  "editor.quickSuggestions": { "comments": true },
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.2)",
+    "rgba(127,255,127,0.2)",
+    "rgba(255,127,255,0.2)",
+    "rgba(79,236,236,0.2)"
+  ]
 }

@@ -48,7 +48,7 @@ class Application
      */
     public function getController(): \app\core\Controller
     {
-        $this->controller;
+        return $this->controller;
     }
 
     /**

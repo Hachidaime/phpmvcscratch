@@ -8,5 +8,10 @@
     "scope": "html",
     "prefix": "phpclass",
     "body": "<?php\n/**\n * Class $TM_FILENAME_BASE \n *\n * @author Hachidaime\n */\nclass $TM_FILENAME_BASE {\n$1\n}\n?>"
+  },
+  "PHP Dump": {
+    "scope": "php,html",
+    "prefix": "dump",
+    "body": "var_dump($1);\nexit();"
   }
 }

@@ -28,9 +28,29 @@ class Request
      *
      * @return void
      */
-    public function getMethod()
+    public function method()
     {
         return strtolower($_SERVER['REQUEST_METHOD']);
+    }
+
+    /**
+     * isGet
+     *
+     * @return void
+     */
+    public function isGet()
+    {
+        return $this->method() === 'get';
+    }
+
+    /**
+     * isPost
+     *
+     * @return void
+     */
+    public function isPost()
+    {
+        return $this->method() === 'post';
     }
 
     /**
@@ -41,7 +61,7 @@ class Request
     public function getBody()
     {
         $body = [];
-        if ($this->getMethod() === 'get') {
+        if ($this->method() === 'get') {
             foreach ($_GET as $key => $value) {
                 $body[$key] = filter_input(
                     INPUT_GET,
@@ -51,7 +71,7 @@ class Request
             }
         }
 
-        if ($this->getMethod() === 'post') {
+        if ($this->method() === 'post') {
             foreach ($_POST as $key => $value) {
                 $body[$key] = filter_input(
                     INPUT_POST,

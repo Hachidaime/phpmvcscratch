@@ -15,6 +15,7 @@ class Application
     public Request $request;
     public Response $response;
     public static Application $app;
+    public Controller $controller;
 
     /**
      * Application __construct
@@ -38,6 +39,27 @@ class Application
     public function run()
     {
         echo $this->router->resolve();
+    }
+
+    /**
+     * getController
+     *
+     * @return app\core\Controller
+     */
+    public function getController(): \app\core\Controller
+    {
+        $this->controller;
+    }
+
+    /**
+     * setController
+     *
+     * @param  mixed $controller
+     * @return void
+     */
+    public function setController(\app\core\Controller $controller): void
+    {
+        $this->controller = $controller;
     }
 }
 ?>

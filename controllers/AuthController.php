@@ -20,6 +20,7 @@ class AuthController extends Controller
      */
     public function login()
     {
+        $this->setLayout('auth');
         return $this->render('login');
     }
 
@@ -33,6 +34,7 @@ class AuthController extends Controller
         if ($request->isPost()) {
             return 'Hancle submitted data';
         }
+        $this->setLayout('auth');
         return $this->render('register');
     }
 }

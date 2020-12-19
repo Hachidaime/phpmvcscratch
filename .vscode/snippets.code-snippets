@@ -6,8 +6,13 @@
   },
   "PHP Tag with Class": {
     "scope": "html",
-    "prefix": "phpclass",
+    "prefix": "phpcls",
     "body": "<?php\n/**\n * Class $TM_FILENAME_BASE \n *\n * @author Hachidaime\n */\nclass $TM_FILENAME_BASE {\n$1\n}\n?>"
+  },
+  "PHP Sort Echo": {
+    "scope": "html",
+    "prefix": "phpe",
+    "body": "<?= $1 ?>"
   },
   "PHP Dump": {
     "scope": "php,html",

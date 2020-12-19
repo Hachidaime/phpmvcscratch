@@ -40,9 +40,6 @@ class AuthController extends Controller
                 return 'Success';
             }
 
-            var_dump($registerModel->errors);
-            exit();
-
             return $this->render('register', ['model' => $registerModel]);
         }
         $this->setLayout('auth');

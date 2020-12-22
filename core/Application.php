@@ -23,7 +23,7 @@ class Application
      *
      * @return void
      */
-    public function __construct($rootPath)
+    public function __construct($rootPath, array $config)
     {
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
@@ -31,7 +31,7 @@ class Application
         $this->response = new Response();
         $this->router = new Router($this->request, $this->response);
 
-        $this->db = new Database();
+        $this->db = new Database($config['db']);
     }
 
     /**
